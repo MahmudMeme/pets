@@ -35,7 +35,8 @@ public class PetController {
 
     @GetMapping({"/create-pets", "/create-pets/", "/create-pets/{number}"})
     public List<Pet> createPets(@PathVariable(required = false) Integer number) {
-        int count = (number == null) ? 20 : number;
+        int maxNumber = 20;
+        int count = (number == null) ? maxNumber : number;
         return petService.createPets(count);
     }
 

@@ -37,7 +37,8 @@ public class UserController {
 
     @GetMapping({"/create-users", "/create-users/", "/create-users/{number}"})
     public List<User> createUsers(@PathVariable(required = false) Integer number) {
-        int count = (number == null) ? 20 : number;
+        int maxNumber = 20;
+        int count = (number == null) ? maxNumber : number;
         return userService.createUsers(count);
     }
 
