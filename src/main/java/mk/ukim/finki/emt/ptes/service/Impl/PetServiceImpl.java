@@ -1,8 +1,6 @@
 package mk.ukim.finki.emt.ptes.service.Impl;
 
 import mk.ukim.finki.emt.ptes.model.Pet;
-import mk.ukim.finki.emt.ptes.model.dto.PetDto;
-import mk.ukim.finki.emt.ptes.model.dto.maper.PetMapper;
 import mk.ukim.finki.emt.ptes.model.enums.PetType;
 import mk.ukim.finki.emt.ptes.repository.PetRepository;
 import mk.ukim.finki.emt.ptes.service.FactoryGenerator;

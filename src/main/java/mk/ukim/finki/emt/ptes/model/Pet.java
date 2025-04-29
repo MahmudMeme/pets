@@ -11,6 +11,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @ToString
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Pet {

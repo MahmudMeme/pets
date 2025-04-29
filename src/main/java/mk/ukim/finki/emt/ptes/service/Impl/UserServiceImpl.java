@@ -73,11 +73,10 @@ public class UserServiceImpl implements UserService {
 
 //        int purchases=0;
         Set<User> uniqueUsers = new HashSet<>();
-        ;
 
         for (User user : users) {
             for (Pet pet : pets) {
-                if (user.getBudget() < pet.getPrice() || pet.getOwner() != null) {
+                if (user.getBudget() <= pet.getPrice() || pet.getOwner() != null) {
                     continue;
                 } else {
                     int userBudget = user.getBudget();
@@ -100,7 +99,7 @@ public class UserServiceImpl implements UserService {
             }
         }
         addHistoryLog(users.size(), uniqueUsers.size());
-        return users;
+        return uniqueUsers.stream().toList();
     }
 
     @Override
@@ -111,6 +110,5 @@ public class UserServiceImpl implements UserService {
         historyLog.setNumberOfUsersFailed(allUsers - uniqueUsers);
 
         historyLogRepository.save(historyLog);
-
     }
 }

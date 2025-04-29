@@ -2,16 +2,14 @@ package mk.ukim.finki.emt.ptes.model.dto;
 
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import mk.ukim.finki.emt.ptes.model.enums.PetType;
 
 import java.time.LocalDate;
 
 @Getter
 @Setter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class PetDto {
