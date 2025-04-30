@@ -1,4 +1,4 @@
-package mk.ukim.finki.emt.ptes.model.dataholder;
+package mk.ukim.finki.emt.ptes.dataholder;
 
 import jakarta.annotation.PostConstruct;
 import mk.ukim.finki.emt.ptes.service.PetService;
